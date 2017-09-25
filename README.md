@@ -6,6 +6,14 @@ A mini social-network created with the awesome Golang💖💖!!
 2. [Requirements](#requirements)
 3. [Usage](#usage)
 
+# Screenshots
+![alt text](https://raw.githubusercontent.com/yTakkar/Go-Mini-Social-Network/master/screenshots/Snap%202017-09-26%20at%2001.11.55.png)
+![alt text](https://raw.githubusercontent.com/yTakkar/Go-Mini-Social-Network/master/screenshots/Snap%202017-09-26%20at%2001.12.18.png)
+![alt text](https://raw.githubusercontent.com/yTakkar/Go-Mini-Social-Network/master/screenshots/Snap%202017-09-26%20at%2001.13.22.png)
+![alt text](https://raw.githubusercontent.com/yTakkar/Go-Mini-Social-Network/master/screenshots/Snap%202017-09-26%20at%2001.12.03.png)
+![alt text](https://raw.githubusercontent.com/yTakkar/Go-Mini-Social-Network/master/screenshots/Snap%202017-09-26%20at%2001.13.07.png)
+![alt text](https://raw.githubusercontent.com/yTakkar/Go-Mini-Social-Network/master/screenshots/Snap%202017-09-26%20at%2001.13.29.png)
+
 # Requirements
 1. Make sure you keep this project inside `src/` of your Golang project folder.
 2. Following packages should be installed.
