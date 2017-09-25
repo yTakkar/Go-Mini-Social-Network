@@ -1,5 +1,5 @@
 # Go-Mini-Social-Network
-A mini social-network created with the awesome Golang💖💖!!
+A mini Social-Network created with the awesome Golang💖💖!!
 
 # Quick Links
 1. [Screenshots](#screenshots)
