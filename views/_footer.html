@@ -1,0 +1,7 @@
+{{ define "footer" }}
+
+<script src="/js/dist/bundle.js"></script>
+</body>
+</html>
+
+{{ end }}

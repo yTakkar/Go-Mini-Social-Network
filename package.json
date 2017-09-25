@@ -1,0 +1,32 @@
+{
+  "name": "go-mini-social-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "go run main.go",
+    "dev": "webpack -d --watch",
+    "build": "webpack -p --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yTakkar/Go-Mini-Social-Network.git"
+  },
+  "author": "yTakkar <www.shtakkar@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yTakkar/Go-Mini-Social-Network/issues"
+  },
+  "homepage": "https://github.com/yTakkar/Go-Mini-Social-Network#readme",
+  "dependencies": {
+    "handy-notification": "^1.0.26",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.3.3",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.6.1"
+  }
+}

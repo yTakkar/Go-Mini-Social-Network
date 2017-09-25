@@ -1,0 +1,47 @@
+{{ template "header" . }}
+
+{{ $ses_id := .session.id }}
+{{ $GET := .GET }}
+{{ $UD := .UD }}
+{{ $noF := .noF  }}
+
+<div class="notes_wrapper">
+  <div class="explore">
+
+    <div class="explores">
+
+      {{ if .users }}
+         {{ range $u := .users }}
+          <div class="explores_list">
+            <div class="exl_main">
+              <img src="/users/{{ $u.id }}/avatar.png" alt="" srcset="">
+              <div class="exl_content">
+                <span class="exl_username">{{ call $UD $u.id $ses_id }}</span>
+                <div class="exl_desc">
+                  <span class="exl_email">{{ call $GET $u.id "email" }}</span>
+                  <span class="exl_desc_sep">•</span>
+                  <span class="exl_followers">{{ call $noF $u.id }} Followers</span>
+                </div>
+              </div>
+            </div>
+            <div class="exl_ff">
+              <a href="/profile/{{ $u.id }}" class="pri_btn">Profile</a>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+
+      {{ if not .users }}
+        {{ template "nothing" "No one to explore!!" }}
+      {{ end }}
+
+      {{ if .users }}
+        {{ template "end" }}
+      {{ end }}
+
+    </div>
+
+  </div>
+</div>
+
+{{ template "footer" }}

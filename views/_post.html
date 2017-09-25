@@ -1,0 +1,23 @@
+{{ define "post" }}
+
+{{ $GET := .GET }}
+
+{{ range $post := .posts }}
+  <a href="/view_post/{{ $post.postID }}" class="note">
+    <div class="note_header common_header">
+      <img src="/users/{{ $post.createdBy }}/avatar.png" alt="" srcset="">
+      <div class="note_h_left">
+        <span class="note_username">{{ call $GET $post.createdBy "username" }}</span>
+        <span class='note_time'>{{ $post.createdAt }}</span>
+      </div>
+    </div>
+    <div class="note_title">
+      <span>{{ $post.title }}</span>
+    </div>
+    <div class="note_content">
+      <span>{{ $post.content }}</span>
+    </div>
+  </a>
+{{ end }}
+
+{{ end }}

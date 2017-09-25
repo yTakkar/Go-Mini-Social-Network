@@ -1,0 +1,35 @@
+{{ template "header" . }}
+
+<div class="notes_wrapper">
+  <div class="home">
+
+    <div class="blog">
+      <div class="blog_c">
+        <span class="blog_title">{{ .post.title }}</span>
+        <span class="blog_content">{{ .post.content }}</span>
+      </div>
+      <div class="blog_actions">
+        <div class="b_a_left">
+          {{ if call .lon .post.postID .session.id }}
+            <span class="unlike_post lu_post" data-post="{{ .post.postID }}" ><i class="material-icons">favorite</i></span>
+          {{ end }}
+          {{ if not (call .lon .post.postID .session.id) }}
+            <span class="like_post lu_post" data-post="{{ .post.postID }}" ><i class="material-icons">favorite_border</i></span>
+          {{ end }}
+          <a href="/likes/{{ .post.postID }}" class="sec_btn" >{{ .likes }} Likes</a>
+        </div>
+        <div class="b_a_right">
+          {{ if eq .session.id .postCreatedBy }}
+            <a href="/edit_post/{{ .post.postID }}" class="sec_btn">Edit post</a>
+            <a href="#" class="sec_btn blog_dlt" data-post="{{ .post.postID }}">Delete post</a>
+          {{ end }}
+          <a href="/profile/{{ .session.id }}" class="pri_btn blog_back">Back</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+{{ template "footer" }}

@@ -1,0 +1,24 @@
+{{ template "header" . }}
+
+<div class="notes_wrapper">
+  <div class='edit' data-post="{{ .post.postID }}">
+    <div class="edit_info">
+      <img class="edit_img" src='/users/{{ .session.id }}/avatar.png' alt="Your avatar" />
+      <span>Edit Post</span>
+    </div>
+    <div class="eu_div">
+      <span class='edit_span'>Title</span>
+      <input type="text" class='e_username b_title' placeholder='Title..' autoComplete='false' autoFocus spellCheck='false' value="{{ .post.title }}"
+      />
+    </div>
+    <div class="eb_div">
+      <span class='edit_span'>Content</span>
+      <textarea class="e_bio b_content" placeholder='Content..' spellCheck='false'>{{ .post.content }}</textarea>
+    </div>
+    <div class="eb_btns">
+      <a href="#" class="pri_btn e_done d_editing">Done Editing</a>
+    </div>
+  </div>
+</div>
+
+{{ template "footer" }}

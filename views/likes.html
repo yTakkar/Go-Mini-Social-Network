@@ -1,0 +1,47 @@
+{{ template "header" . }}
+
+{{ $ses_id := .session.id }}
+{{ $GET := .GET }}
+{{ $UD := .UD }}
+{{ $noF := .noF  }}
+
+<div class="notes_wrapper">
+  <div class="explore">
+
+    <div class="explores">
+
+      {{ if .likes }}
+        {{ range $l := .likes }}
+          <div class="explores_list">
+            <div class="exl_main">
+              <img src="/users/{{ $l.likeBy }}/avatar.png" alt="" srcset="">
+              <div class="exl_content">
+                <span class="exl_username">{{ call $UD $l.likeBy $ses_id }}</span>
+                <div class="exl_desc">
+                  <span class="exl_email">{{ call $GET $l.likeBy "email" }}</span>
+                  <span class="exl_desc_sep">•</span>
+                  <span class="exl_followers">{{ call $noF $l.likeBy }} Followers</span>
+                </div>
+              </div>
+            </div>
+            <div class="exl_ff">
+              <a href="/profile/{{ $l.likeBy }}" class="pri_btn">Profile</a>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+
+      {{ if not .likes }}
+        {{ template "nothing" "This post has no likes!!" }}
+      {{ end }}
+
+      {{ if .likes }}
+        {{ template "end" }}
+      {{ end }}
+
+    </div>
+
+  </div>
+</div>
+
+{{ template "footer" }}

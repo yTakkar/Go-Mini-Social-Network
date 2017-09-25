@@ -1,0 +1,36 @@
+{{ template "header" . }}
+
+<div class="notes_wrapper">
+
+  <div class='edit'>
+    <div class="edit_info">
+      <img class="edit_img" src='/users/{{ .session.id }}/avatar.png' alt="Your avatar" />
+      <span>@{{ .session.username }}</span>
+    </div>
+    <div class="eu_div">
+      <span class='edit_span'>Username</span>
+      <input type="text" class='e_username ep_username' placeholder='Username..' autoComplete='false' autoFocus spellCheck='false' value='{{ .session.username }}' />
+    </div>
+    <div class="ee_div">
+      <span class='edit_span'>Email</span>
+      <input type="email" class='e_email ep_email' placeholder='Email..' autoComplete='false' spellCheck='false' value='{{ .email }}' />
+    </div>
+    <div class="eb_div">
+      <span class='edit_span'>Bio</span>
+      <textarea class="e_bio ep_bio" placeholder='Bio..' spellCheck='false'>{{ .bio }}</textarea>
+    </div>
+    <div class="eb_btns">
+      <form class='avatar_form' method="post" encType='multipart/formdata' >
+        <input type="file" name="avatar" id="avatar_file" accept="image/*" />
+        <label for="avatar_file" class='sec_btn avatar_span'>Change avatar</label>
+      </form>
+      <a href="#" class="pri_btn e_done ep_done">Done editing</a>
+    </div>
+    <div class="e_joined">
+      <span>Joined: {{ .joined }}</span>
+    </div>
+  </div>
+
+</div>
+
+{{ template "footer" }}
