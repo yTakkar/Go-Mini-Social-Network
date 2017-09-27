@@ -1,6 +1,9 @@
 # Go-Mini-Social-Network
 A mini Social-Network created with the awesome Golang💖💖!!
 
+# Rails Version
+Click **[here](https://github.com/yTakkar/Rails-Mini-Social-Network)** for the same project develped with Ruby On Rails!!
+
 # Quick Links
 1. [Screenshots](#screenshots)
 2. [Requirements](#requirements)
