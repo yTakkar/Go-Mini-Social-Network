@@ -62,3 +62,5 @@ npm run start
 ```javascript
 localhost:[PORT] PORT=4907 (By default)
 ```
+
+7. Enjoy 💖💖!!
