@@ -55,7 +55,7 @@ DB=DB YOU JUST CREATE [STRING]
 
 5. Now run the app.
 ```javascript
-npm run start
+npm start [OR] yarn start
 ```
 
 6. Run the app in browser.
