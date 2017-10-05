@@ -42,7 +42,7 @@ or
 yarn
 ```
 
-3. Create a `.env` file & insert the above code. Replace values with yours!!
+3. Create a `.env` file & insert the following code. Replace values with yours!!
 ```javascript
 PORT=YOUR PORT (default: 2280) [STRING]
 SESSION_SECRET=ANYTHING SECRET [STRING]
