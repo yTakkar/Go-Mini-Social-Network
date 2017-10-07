@@ -653,3 +653,41 @@
   }
 
 }
+
+// REGISTERED PAGE
+.registered{
+  position: absolute;
+  background: $ff;
+  padding: 20px;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,.1);
+}
+
+// DEACTIVATE
+.deactivate{
+  width: 500px;
+
+  & .deactivate_title{
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  & .deactivate_btn{
+    display: block;
+    margin-top: 11px;
+    text-align: right;
+
+    & a{
+      display: inline-block;
+      padding: 4px 10px;
+    }
+
+  }
+
+}

@@ -407,3 +407,11 @@ func Likes(c *gin.Context) {
 		"noF":     CO.NoOfFollowers,
 	})
 }
+
+// Deactivate route
+func Deactivate(c *gin.Context) {
+	renderTemplate(c, "deactivate", gin.H{
+		"title":   "Deactivate your acount",
+		"session": ses(c),
+	})
+}

@@ -30,6 +30,7 @@ func main() {
 	router.GET("/signup", R.Signup)
 	router.GET("/login", R.Login)
 	router.GET("/logout", R.Logout)
+	router.GET("/deactivate", R.Deactivate)
 	router.GET("/edit_profile", R.EditProfile)
 	router.GET("/create_post", R.CreatePost)
 
@@ -62,6 +63,7 @@ func main() {
 		api.POST("/unfollow", R.Unfollow)
 		api.POST("/like", R.Like)
 		api.POST("/unlike", R.Unlike)
+		api.POST("/deactivate-account", R.DeactivateAcc)
 	}
 
 	server := negroni.Classic()

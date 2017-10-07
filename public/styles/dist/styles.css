@@ -738,3 +738,32 @@ select {
       .explore .explores div.explores_list .exl_ff a {
         padding: 5px 20px;
         font-size: 14px; }
+
+.registered {
+  position: absolute;
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1); }
+
+.deactivate {
+  width: 500px; }
+  .deactivate .deactivate_title {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px; }
+  .deactivate .deactivate_btn {
+    display: block;
+    margin-top: 11px;
+    text-align: right; }
+    .deactivate .deactivate_btn a {
+      display: inline-block;
+      padding: 4px 10px; }

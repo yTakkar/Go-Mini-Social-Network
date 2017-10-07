@@ -175,3 +175,40 @@ func Unlike(c *gin.Context) {
 		"mssg": "Post Unliked!!",
 	})
 }
+
+// DeactivateAcc route post method
+func DeactivateAcc(c *gin.Context) {
+	session := CO.GetSession(c)
+	id, _ := CO.AllSessions(c)
+	db := CO.DB()
+	var postID int
+
+	db.Exec("DELETE FROM profile_views WHERE viewBy=?", id)
+	db.Exec("DELETE FROM profile_views WHERE viewTo=?", id)
+	db.Exec("DELETE FROM follow WHERE followBy=?", id)
+	db.Exec("DELETE FROM follow WHERE followTo=?", id)
+	db.Exec("DELETE FROM likes WHERE likeBy=?", id)
+
+	rows, _ := db.Query("SELECT postID FROM posts WHERE createdBy=?", id)
+	for rows.Next() {
+		rows.Scan(&postID)
+		db.Exec("DELETE FROM likes WHERE postID=?", postID)
+	}
+
+	db.Exec("DELETE FROM posts WHERE createdBy=?", id)
+	db.Exec("DELETE FROM users WHERE id=?", id)
+
+	dir, _ := os.Getwd()
+	userPath := dir + "/public/users/" + id.(string)
+
+	rmErr := os.RemoveAll(userPath)
+	CO.Err(rmErr)
+
+	delete(session.Values, "id")
+	delete(session.Values, "username")
+	session.Save(c.Request, c.Writer)
+
+	json(c, gin.H{
+		"mssg": "Deactivated your account!!",
+	})
+}

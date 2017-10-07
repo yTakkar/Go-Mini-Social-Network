@@ -212,3 +212,19 @@ $('.unlike_post').on('click', e => {
     }
   })
 })
+
+// DEACTIVATE ACCOUNT
+$('.d_btn').on('click', e => {
+  e.preventDefault()
+  $.ajax({
+    url: '/api/deactivate-account',
+    method: 'POST',
+    dataType: 'JSON',
+    success: data => {
+      Notify({
+        value: data.mssg,
+        done: () => location.href = '/welcome'
+      })
+    }
+  })
+})
