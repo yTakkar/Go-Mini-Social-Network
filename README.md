@@ -2,7 +2,7 @@
 A mini Social-Network created with the awesome Golang💖💖!!
 
 # Another Versions
-**[React Version](https://github.com/yTakkar/Single-Page-Social-Network)**
+**[React Version](https://github.com/yTakkar/React-Mini-Social-Network)**
 
 **[Vue Version](https://github.com/yTakkar/Vue-Mini-Social-Network)**
 
