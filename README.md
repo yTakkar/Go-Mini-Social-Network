@@ -32,6 +32,7 @@ A mini Social-Network created with the awesome Golang💖💖!!
     5. [bcrypt](https://golang.org/x/crypto/bcrypt)
     6. [sessions](https://github.com/gorilla/sessions)
     7. [godotenv](https://github.com/joho/godotenv)
+    8. [fresh](https://github.com/pilu/fresh)
 
 # Usage
 

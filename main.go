@@ -4,8 +4,9 @@ import (
 	R "Go-Mini-Social-Network/routes"
 	"os"
 
-	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
+
+	"github.com/gin-gonic/gin"
 	"github.com/urfave/negroni"
 )
 
