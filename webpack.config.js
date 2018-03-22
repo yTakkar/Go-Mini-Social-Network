@@ -1,10 +1,9 @@
-const path = require('path')
+const { join } = require('path')
 
 module.exports = {
   entry: './public/js/src/main.js',
   output: {
-    // eslint-disable-next-line no-undef
-    path: path.join(__dirname, '/public/js/dist/'),
+    path: join(__dirname, '/public/js/dist/'), // eslint-disable-line no-undef
     filename: 'bundle.js'
   },
   mode: 'development',
