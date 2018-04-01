@@ -23,28 +23,18 @@ A mini Social-Network created with the awesome Golang💖💖!!
 ![alt text](https://raw.githubusercontent.com/yTakkar/Go-Mini-Social-Network/master/screenshots/Snap%202017-09-26%20at%2001.13.29.png)
 
 # Requirements
-1. Make sure you keep this project inside `src/` of your Golang project folder.
-2. Following packages should be installed.
-    1. [gin](https://github.com/gin-gonic/gin/)
-    2. [negroni](https://github.com/urfave/negroni)
-    3. [checkmail](https://github.com/badoux/checkmail)
-    4. [MySQL driver](https://github.com/go-sql-driver/mysql)
-    5. [bcrypt](https://golang.org/x/crypto/bcrypt)
-    6. [sessions](https://github.com/gorilla/sessions)
-    7. [godotenv](https://github.com/joho/godotenv)
-    8. [fresh](https://github.com/pilu/fresh)
-
+1. Make sure you keep this project inside `$GOPATH/src` folder.
 # Usage
 
 1. Open PHPMyAdmin, create a db & import `db.sql`.
 
-2. Install all the dependencies.
+2. Install all the JS dependencies.
 ```bash
-# with npm
-npm install
+# golang deps
+dep ensure
 
-# or with yarn
-yarn
+# JS deps either with npm
+npm install [or] yarn
 ```
 
 3. Create a `.env` file & insert the following code. Replace values with yours!!
@@ -56,11 +46,11 @@ DB_PASSWORD=DB PASSWORD [STRING]
 DB=DB YOU JUST CREATE [STRING]
 ```
 
-4. My root folder name is `Go-Mini-Social-Network`, if yours is different then go ahead & change it as it used for imports. It can be done easily by searching the whole project.
+4. My root folder name is `Go-Mini-Social-Network`, if yours is different then go ahead & change it on imports. It can be done easily by searching the whole project.
 
 5. Now run the app.
 ```javascript
-npm start [OR] yarn start
+npm start [or] yarn start
 ```
 
 6. Run the app in browser.

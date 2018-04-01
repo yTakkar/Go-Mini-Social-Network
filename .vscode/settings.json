@@ -6,5 +6,6 @@
   },
   "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "instantmarkdown.autoOpenBrowser": false
 }
