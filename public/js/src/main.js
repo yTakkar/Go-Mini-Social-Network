@@ -3,18 +3,15 @@ import $ from 'jquery'
 import Notify from 'handy-notification'
 
 // SCROLL TO TOP
-$('.page_end').on('click', () =>
-  $('html, body').animate({ scrollTop: 0 }, 450)
-)
+$('.page_end').on('click', () => $('html, body').animate({ scrollTop: 0 }, 450))
 
 // CREATE POST
 $('.create_blog').on('click', e => {
   e.preventDefault()
-  let
-    title = $('.create_username').val(),
+  let title = $('.create_username').val(),
     content = $('.create_content').val()
 
-  if(!title || !content){
+  if (!title || !content) {
     Notify({ value: 'Some values are missing!!' })
   } else {
     $.ajax({
@@ -27,18 +24,19 @@ $('.create_blog').on('click', e => {
       dataType: 'JSON',
       success: data => {
         let { mssg, postID } = data
-        Notify({ value: mssg, done: () => location.href = `/view_post/${postID}` })
+        Notify({
+          value: mssg,
+          done: () => (location.href = `/view_post/${postID}`)
+        })
       }
     })
   }
-
 })
 
 // DELETE POST
 $('.blog_dlt').on('click', e => {
   e.preventDefault()
-  let
-    post = e.currentTarget.dataset['post'],
+  let post = e.currentTarget.dataset['post'],
     session = $('.data').data('session')
 
   $.ajax({
@@ -50,22 +48,20 @@ $('.blog_dlt').on('click', e => {
       let { mssg } = data
       Notify({
         value: mssg,
-        done: () => location.href = `/profile/${session}`
+        done: () => (location.href = `/profile/${session}`)
       })
     }
   })
-
 })
 
 // EDIT POST
 $('.d_editing').on('click', e => {
   e.preventDefault()
-  let
-    postID = $('.edit').data('post'),
+  let postID = $('.edit').data('post'),
     title = $('.b_title').val(),
     content = $('.b_content').val()
 
-  if (!title || !content){
+  if (!title || !content) {
     Notify({ value: 'Some values are missing!!' })
   } else {
     $.ajax({
@@ -87,12 +83,11 @@ $('.d_editing').on('click', e => {
 // EDIT PROFILE
 $('.ep_done').on('click', e => {
   e.preventDefault()
-  let
-    username = $('.ep_username').val(),
+  let username = $('.ep_username').val(),
     email = $('.ep_email').val(),
     bio = $('.ep_bio').val()
 
-  if (!username || !email){
+  if (!username || !email) {
     Notify({ value: 'Some values are missing!!' })
   } else {
     $.ajax({
@@ -109,18 +104,16 @@ $('.ep_done').on('click', e => {
         console.log(data)
         Notify({
           value: mssg,
-          done: () => success ? location.reload() : null
+          done: () => (success ? location.reload() : null)
         })
       }
     })
   }
-
 })
 
 // CHANGE AVATAR
 $('#avatar_file').on('change', e => {
-  let
-    file = e.target.files[0],
+  let file = e.target.files[0],
     form = new FormData()
 
   form.append('avatar', file)
@@ -136,11 +129,10 @@ $('#avatar_file').on('change', e => {
       let { mssg, success } = data
       Notify({
         value: mssg,
-        done: () => success ? location.reload() : null
+        done: () => (success ? location.reload() : null)
       })
     }
   })
-
 })
 
 // FOLLOW USER
@@ -225,7 +217,7 @@ $('.d_btn').on('click', e => {
     success: data => {
       Notify({
         value: data.mssg,
-        done: () => location.href = '/welcome'
+        done: () => (location.href = '/welcome')
       })
     }
   })

@@ -4,10 +4,11 @@ module.exports = {
     "commonjs": true,
     "es6": true
   },
-  "extends": "eslint:recommended",
+  "extends": ["eslint:recommended"],
   "parserOptions": {
     "sourceType": "module"
   },
+  "plugins": ["prettier"],
   "rules": {
     "indent": [
       "error",
@@ -24,6 +25,13 @@ module.exports = {
     'no-console': 'off',
     'no-ternary': 0,
     'no-nested-ternary': 0,
-    'multiline-ternary': ["error", "never"]
+    'multiline-ternary': ["error", "never"],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": false
+      }
+    ]
   }
 };

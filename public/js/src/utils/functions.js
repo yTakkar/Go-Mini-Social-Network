@@ -6,9 +6,7 @@ const commonLogin = options => {
   let { data, btn, url, redirect, defBtnValue } = options
   let overlay2 = $('.overlay-2')
 
-  btn
-    .attr('value', 'Please wait..')
-    .addClass('a_disabled')
+  btn.attr('value', 'Please wait..').addClass('a_disabled')
   overlay2.show()
 
   $.ajax({
@@ -16,17 +14,15 @@ const commonLogin = options => {
     data,
     method: 'POST',
     dataType: 'JSON',
-    success: (data) => {
+    success: data => {
       let { mssg, success } = data
       if (success) {
-        Notify({ value: mssg, done: () => location.href = redirect })
+        Notify({ value: mssg, done: () => (location.href = redirect) })
         btn.attr('value', 'Redirecting..')
         overlay2.show()
       } else {
         Notify({ value: mssg })
-        btn
-          .attr('value', defBtnValue)
-          .removeClass('a_disabled')
+        btn.attr('value', defBtnValue).removeClass('a_disabled')
         overlay2.hide()
       }
       btn.blur()
@@ -40,7 +36,4 @@ const Back = e => {
   window.history.back()
 }
 
-export {
-  commonLogin,
-  Back
-}
+export { commonLogin, Back }
