@@ -40,7 +40,7 @@ const Back = e => {
   window.history.back()
 }
 
-module.exports = {
+export {
   commonLogin,
   Back
 }
