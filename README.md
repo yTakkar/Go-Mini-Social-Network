@@ -28,12 +28,12 @@ A mini Social-Network created with the awesome Golang💖💖!!
 
 1. Open PHPMyAdmin, create a db & import `db.sql`.
 
-2. Install all the JS dependencies.
+2. Install dependencies.
 ```bash
 # golang deps
 dep ensure
 
-# JS deps either with npm
+# JS deps (either with npm or with Yarn)
 npm install [or] yarn
 ```
 
