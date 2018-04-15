@@ -7,7 +7,7 @@
     "start": "go run main.go",
     "start:watch": "fresh -c fresh_runner.conf",
     "dev": "webpack -d --watch",
-    "build": "webpack -p --watch",
+    "build": "webpack -p --watch"
   },
   "repository": {
     "type": "git",
