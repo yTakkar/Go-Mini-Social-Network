@@ -3,7 +3,8 @@ import $ from 'jquery'
 import Notify from 'handy-notification'
 
 // SCROLL TO TOP
-$('.page_end').on('click', () => $('html, body').animate({ scrollTop: 0 }, 450))
+$('.page_end').on('click', () => 
+  $('html, body').animate({ scrollTop: 0 }, 450))
 
 // CREATE POST
 $('.create_blog').on('click', e => {

@@ -3,7 +3,7 @@ const { join } = require('path')
 module.exports = {
   entry: './public/js/src/main.js',
   output: {
-    path: join(__dirname, '/public/js/dist/'), // eslint-disable-line no-undef
+    path: join(__dirname, '/public/js/dist/'),
     filename: 'bundle.js'
   },
   mode: 'development',
