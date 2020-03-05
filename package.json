@@ -21,7 +21,7 @@
   "homepage": "https://github.com/yTakkar/Go-Mini-Social-Network#readme",
   "dependencies": {
     "handy-notification": "^1.0.26",
-    "jquery": "^3.2.1"
+    "jquery": "^3.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
